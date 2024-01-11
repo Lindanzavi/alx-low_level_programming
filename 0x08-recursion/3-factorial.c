@@ -1,22 +1,38 @@
-#include "main.h"
-#include <stdio.h>
+#include " main.h"
 
 /**
- * main - check the code
+ * factorial - gets factorial of n
+ * @n: integer
  *
- * Return: Always 0.
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
-int main(void)
+int factorial(int n)
 {
-    int r;
-
-    r = factorial(1);
-    printf("%d\n", r);
-    r = factorial(5);
-    printf("%d\n", r);
-    r = factorial(10);
-    printf("%d\n", r);
-    r = factorial(-1024);
-    printf("%d\n", r);
-    return (0);
+	if (n < 0)
+		return (-1);
+	if (n == 0)
+		return (1);
+	return (n * factorial(n - 1));
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
